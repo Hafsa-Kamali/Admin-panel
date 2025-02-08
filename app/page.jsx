@@ -18,13 +18,14 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
-      if (user.email === "manager@gmail.com") {
+    
+      // Updated email addresses
+      if (user.email === "managerhafi@gmail.com") {
         router.push('/DashBoard');
-      } else if (user.email === "productsmanager@gmail.com") {
+      } else if (user.email === "productsmanagerhafi@gmail.com") {
         router.push('/DashBoard');
-      } else if (user.email === "salesmanager123@gmail.com") {
-        router.push('/DashBoard'); 
+      } else if (user.email === "salesmanagerhafi@gmail.com") {
+        router.push('/DashBoard');
       } else {
         setError('Invalid user role');
       }

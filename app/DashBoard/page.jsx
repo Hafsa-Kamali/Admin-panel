@@ -6,11 +6,11 @@ import createClient from '@sanity/client';
 
 
 const sanity = createClient({
-  projectId: 'tzca0taz',
+  projectId: 'gs2jqrlc',
   dataset: 'production',
   apiVersion: '2023-01-01',
   useCdn: false,
-  token: 'skJa484NUi5bdqsese9ddoXuZwjWRos63Rbnf1gWM9txJm5oNAR0vk4Yb9DwdHcYDmH5xKsWFX6vJRLsaS7HGThXFfsRGN8eE5Oz6WvM5iej9eZI0I1vHxT14NdYAk8MfVKvLB4KpWjA9VnMk6VqXRgybn3KymElHBtg3PI1USuc6uJ92C8h', // Direct token for testing
+  token: 'skpcJ7WmPpWR9OdBFAdvE3uFAxeHxoiWAYOfgxhyMEZPVcKWLEFzDNXR4UhdTRG6jYYDIUyFs6PvzALZX1YszrZKKzfNEnitR1UfF7xWZCtWon0FC3aGPyyP0OabNOO0kRNUvGAdxG2A53J9HPCmsR77GCvLRdAwjMNFBOjh69QXpPdR6PzB', // Direct token for testing
 });
 import { auth } from '../Firebas/config.js'; // Firebase Auth
 import { useRouter } from 'next/navigation';
@@ -30,11 +30,11 @@ ChartJS.register(
 
 
 const sanityClient = createClient({
-  projectId: "tzca0taz",
+  projectId: "gs2jqrlc",
   dataset: "production",
   apiVersion: "2023-01-01",
   useCdn: false,
-  token: "skFTF0aOQjpxsmony55U5j0nkski58RHOvqdLXvjHU5Dbhj7WYTmWZu7HxAvLgxGkbChXp69BFPlFClfF9gZxs89EMS5W7GIi0iTL5Oa7VNUpnbA8xmmZmVoU6LZXUWoNjcJhHKRUACQXYnLnc8TfFdkwKMV9BhZOPmhuTPUynasyaY1mF7H",
+  token: "skpcJ7WmPpWR9OdBFAdvE3uFAxeHxoiWAYOfgxhyMEZPVcKWLEFzDNXR4UhdTRG6jYYDIUyFs6PvzALZX1YszrZKKzfNEnitR1UfF7xWZCtWon0FC3aGPyyP0OabNOO0kRNUvGAdxG2A53J9HPCmsR77GCvLRdAwjMNFBOjh69QXpPdR6PzB",
 });
 
 
@@ -142,22 +142,22 @@ const AdminDashboard = () => {
     };
 
 
-  useEffect(() => {
-    const user = auth.currentUser;
-    if (user) {
-      if (user.email === "manager@gmail.com") {
-        setUserRole('manager');
-      } else if (user.email === "productsmanager@gmail.com") {
-        setUserRole('productsmanager');
-      } else if (user.email === "salesmanager123@gmail.com") {
-        setUserRole('salesmanager123');
+    useEffect(() => {
+      const user = auth.currentUser;
+      if (user) {
+        if (user.email === "managerhafi@gmail.com") {
+          setUserRole('manager');
+        } else if (user.email === "productsmanagerhafi@gmail.com") {
+          setUserRole('productsmanager');
+        } else if (user.email === "salesmanagerhafi@gmail.com") {
+          setUserRole('salesmanager123');
+        } else {
+          router.push('/'); 
+        }
       } else {
         router.push('/'); 
       }
-    } else {
-      router.push('/'); 
-    }
-  }, [router]);
+    }, [router]);
 
   const handleLogout = () => {
     signOut(auth).then(() => {

@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA_h_C2PBZQwtPWkzk_8Ohb4deOUEtwbJg",
-  authDomain: "furniro-4d5ed.firebaseapp.com",
-  projectId: "furniro-4d5ed",
-  storageBucket: "furniro-4d5ed.firebasestorage.app",
-  messagingSenderId: "58867002256",
-  appId: "1:58867002256:web:778dc578d9a2464577e115",
-  measurementId: "G-9H7QRRC186"
+  apiKey: "AIzaSyAeCx8b6u5xA-iXaW9rMLsOxY7LZGV1mhY",
+  authDomain: "bandage-app-c31f7.firebaseapp.com",
+  projectId: "bandage-app-c31f7",
+  storageBucket: "bandage-app-c31f7.firebasestorage.app",
+  messagingSenderId: "302810679057",
+  appId: "1:302810679057:web:21fe43c92afdff8586eeb0",
+  measurementId: "G-WS3T9J5WXH"
 };
 
 const app = initializeApp(firebaseConfig);
